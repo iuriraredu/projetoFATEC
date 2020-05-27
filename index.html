@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
-<head>
-  <title>Login</title>
-  <!--Import Google Icon Font-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <style media="screen">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style media="screen">
 
-    center{
-    	/*-text-transform: uppercase;*/
-    	text-shadow: 2px 2px 5px #F0F0F0;
-      text-align: center;
-    	font-size:150%;
-    }
+      h5{
+      	text-transform: uppercase;
+      	text-shadow: 2px 2px 5px #c0c0c0;
+        text-align: center;
+      	*/*font-size:150%;*/
+      }
 
-    #central {
-    	margin: 20% 20% auto;
-    	opacity : 0.8;
-    	background-color: transparent;
-    	color: #000;
-    	font-size:100%;
-     }
-  </style>
-</head>
-<body class="black">
-  <div class="row" id="central">
-    <center class="white-text">Login</center>
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email">Usuário</label>
+      #central {
+      	margin: 15% auto !important;
+      	opacity : 0.8;
+      	background-color: transparent !important;
+      	color: #000;
+      	/*font-size:100%;*/
+       }
+    </style>
+  </head>
+  <body>
+    <div id="central" class="container">
+      <center><h5 class="Black-text">Bem-Vindo!</h5></center>
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate">
+            <label for="email">Usuário</label>
+          </div>
+          <div class="input-field col s12">
+            <input id="password" type="password" class="validate">
+            <label for="password">Senha</label>
+          </div>
+          <button class="btn waves-effect waves-purple col s12" type="submit" name="action">Acessar
+          <!--  --><i class="material-icons right">power_settings_new</i><!--  -->
+          </button>
         </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="password" type="password" class="validate">
-          <label for="password">Senha</label>
-        </div>
-      </div>
-      <button class="btn waves-effect waves-purple" type="submit" name="action">
-      <!--  --><i class="material-icons left">touch_app</i><!--  -->
-      </button>
-    </form>
-  </div>
-  <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
-</body>
+      </form>
+    </div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+  </body>
 </html>
