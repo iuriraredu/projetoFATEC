@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Início</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script-->
+    <!--script type="text/javascript" src="js/main.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo center">Logo</a>
+        <a href="#" data-activates="menu-mobile" class="button-collapse">
+          <i class="material-icons">menu</i>
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="#">Cadastro</a></li>
+          <li><a href="#">Avisos</a></li>
+          <li><a href="#">Mensagens</a></li>
+          <li><a href="#">Carona Amiga</a></li>
+          <li><a href="index.html"><i class="material-icons right">power_settings_new</i>Sair</a></li>
+        </ul>
+        <ul class="side-nav" id="menu-mobile">
+          <li><a href="#">Cadastro</a></li>
+          <li><a href="#">Avisos</a></li>
+          <li><a href="#">Mensagens</a></li>
+          <li><a href="#">Carona Amiga</a></li>
+          <li><a href="index.html"><i class="material-icons right">power_settings_new</i>Sair</a></li>
+        </ul>
+      </div>
+    </nav>
+    <script>
+    $(function(){
+         $(".button-collapse").sideNav();
+    });
+    </script>
+  </body>
+</html>

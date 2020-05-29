@@ -1,55 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login</title>
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <style media="screen">
 
-      h5{
-      	text-transform: uppercase;
-      	text-shadow: 2px 2px 5px #c0c0c0;
-        text-align: center;
-      	*/*font-size:150%;*/
-      }
-
-      #central {
-      	margin: 15% auto !important;
-      	opacity : 0.8;
-      	background-color: transparent !important;
-      	color: #000;
-      	/*font-size:100%;*/
-       }
-    </style>
-  </head>
-  <body>
-    <div id="central" class="container">
-      <center><h5 class="Black-text">Bem-Vindo!</h5></center>
-      <form class="col s12">
-        <div class="row">
-          <div class="input-field col s12">
-            <input id="email" type="email" class="validate">
-            <label for="email">Usuário</label>
-          </div>
-          <div class="input-field col s12">
-            <input id="password" type="password" class="validate">
-            <label for="password">Senha</label>
-          </div>
-          <button class="btn waves-effect waves-purple col s12" type="submit" name="action">Acessar
-          <!--  --><i class="material-icons right">power_settings_new</i><!--  -->
-          </button>
-        </div>
-      </form>
-    </div>
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style media="screen">
+      h5{
+        text-transform: uppercase;
+        text-shadow: 2px 2px 5px #c0c0c0;
+        text-align: center;
+        */*font-size:150%;*/
+      }
+
+      #central {
+        margin: 10% 20% 10% 20% !important;
+        opacity : 0.8;
+        background-color: transparent !important;
+        color: #000;
+        /*font-size:100%;*/
+      }
+
+      @media only screen and (max-width: 414px)  {
+        #central {
+          margin: 30% 20% auto 20% !important;
+          opacity : 0.8;
+          background-color: transparent !important;
+          color: #000;
+          /*font-size:100%;*/
+        }
+      }
+
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1 0 auto;
+      }
+    </style>
+  </head>
+  <body class="grey.lighten-5">
+    <header>
+      <nav>
+        <div class="nav-wrapper purple darken-1 r">
+          <!-- logo -->
+          <a href="#" class="brand-logo center" style="text-shadow: 2px 2px 5px #c0c0c0"><i class="material-icons">event_note</i>SIC</a>
+        </div>
+      </nav>
+    </header>
+    <main id="central">
+      <div class="container">
+        <center><h5 class="purple-text">Bem-Vindo!</h5></center>
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="email" class="validate">
+              <label for="email">Usuário</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="password" type="password" class="validate">
+              <label for="password">Senha</label>
+            </div>
+            <button class="btn purple waves-effect waves-purple col s12" type="submit" name="action" href="C:\Users\iurir\Desktop\SIC\projetoFATEC\Home.html">Acessar
+            <!--  --><i class="material-icons right">power_settings_new</i><!--  -->
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer class="page-footer purple">
+      <div class="container">
+        <center>© 2020 FATEC FRANCO DA ROCHA</center>
+      </div>
+    </footer>
   </body>
 </html>
