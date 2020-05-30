@@ -12,6 +12,8 @@
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -66,14 +68,14 @@
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="Home.html">Avisos</a></li>
             <li class="active"><a href="#">Cadastro</a></li>
-            <li><a href="#">Mensagens</a></li>
+            <li><a href="Mensagem.html">Mensagens</a></li>
             <li><a href="#">Carona Amiga</a></li>
             <li><a href="index.html"><i class="material-icons right">power_settings_new</i>Sair</a></li>
           </ul>
           <ul class="side-nav" id="menu-mobile">
             <li><a href="Home.html"><i class="material-icons">announcement</i>Avisos</a></li>
             <li class="active"><a href="#"><i class="material-icons">person</i>Cadastro</a></li>
-            <li><a href="#"><i class="material-icons">message</i>Mensagens</a></li>
+            <li><a href="Mensagem.html"><i class="material-icons">message</i>Mensagens</a></li>
             <li><a href="#"><i class="material-icons">directions_car</i>Carona Amiga</a></li>
             <li><div class="divider"></div></li>
             <li><a href="index.html"><i class="material-icons center">power_settings_new</i>Sair</a></li>
@@ -91,10 +93,11 @@
         <div class="row">
           <div class="col s12">
             <div class="card grey.lighten-5">
-              <div class="card-content white-text">
+              <div class="card-content black-text">
                 <button class="btn-floating waves-effect waves-light purple right"><i class="large material-icons">mode_edit</i></button>
                 <span class="card-title purple-text"><b>User_Pessoas</b></span></br>
-                <div class="row">
+
+                <div class="card-action row">
                   <form class="col s12">
                     <div class="row">
                       <div class="input-field col s6">
@@ -105,13 +108,16 @@
                         <input id="last_name" type="text" class="validate">
                         <label for="last_name">Sobrenome</label>
                       </div>
-                        <div class="input-field col s6">
+                        <div class="input-field col s12">
                           <input id="email" type="email" class="validate">
                           <label for="email">Email</label>
                         </div>
-                        <div class="input-field col s6">
+                        <div class="input-field col s12">
                           <input id="telefone" type="tel" class="validate">
                           <label for="telefone">Telefone</label>
+                          <script type="text/javascript">
+                            $("#telefone, #celular").mask("(00) 00000-0000");
+                          </script>
                         </div>
                         <div class="input-field col s6">
                           <input disabled value="Curso" id="curso" type="text" class="validate">
@@ -121,19 +127,27 @@
                           <input disabled value="Turma" id="turma" type="text" class="validate">
                           <label for="turma">Turma</label>
                         </div>
-                        <span class="purple-text col s6">Deseja Participar do Corona Amiga?
-                          <p class="col s12">
+                        <span class="purple-text col s12">Deseja Participar do Carona Amiga?
+                          <!--p class="col s12">
                             <input name="group1" type="radio" id="caronasim" />
                             <label for="caronasim">Sim</label>
                           </p>
                           <p class="col s12">
                             <input name="group1" type="radio" id="caronanao" />
                             <label for="caronanao">Não</label>
-                          </p>
+                          </p-->
+                          <div class="switch">
+                            <label>
+                              Não
+                              <input type="checkbox">
+                              <span class="lever"></span>
+                              Sim
+                            </label>
+                          </div>
                         </span>
                       </div>
-                    </div>
-                  </form>
+                    </form>
+                  </div>
                   <div class="card-action">
                     <button class="btn waves-effect waves-purple col s12 btn-flat disabled" type="submit" name="action"  href="#">Salvar</button>
                   </div>
