@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Cadastro</title>
     <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
@@ -18,40 +18,57 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style media="screen">
-      h5{
-        text-transform: uppercase;
-        text-shadow: 2px 2px 5px #c0c0c0;
-        text-align: center;
-        */*font-size:150%;*/
-      }
+      /** !important was needed for snippet ***/
 
-      #central {
-        margin: 10% 20% 10% 20% !important;
-        opacity : 0.8;
-        background-color: transparent !important;
-        color: #000;
-        /*font-size:100%;*/
-      }
+			/* label focus color */
+			.input-field input:focus+label, .materialize-textarea:focus:not([readonly])+label {
+				color: D50000 !important;
+			}
 
-      @media only screen and (max-width: 414px)  {
-        #central {
-          margin: 30% 20% auto 20% !important;
-          opacity : 0.8;
-          background-color: transparent !important;
-          color: #000;
-          /*font-size:100%;*/
-        }
-      }
+			/* label underline focus color */
+			.row .input-field input:focus, .materialize-textarea:focus:not([readonly]) {
+				border-bottom: 1px solid #D50000 !important;
+				box-shadow: 0 1px 0 0 #D50000 !important;
+			}
 
-      body {
-        display: flex;
-        min-height: 100vh;
-        flex-direction: column;
-      }
+			/* ------------------- */
+			h5 {
+				text-transform: uppercase;
+				text-shadow: 2px 2px 5px #c0c0c0;
+				text-align: center;
+				* /*font-size:150%;*/
+			}
 
-      main {
-        flex: 1 0 auto;
-      }
+			#central {
+				margin: 10% 20% 10% 20% !important;
+				opacity: 0.8;
+				background-color: transparent !important;
+				color: #000;
+				/*font-size:100%;*/
+			}
+
+			@media only screen and (max-width: 414px) {
+				#central {
+					margin: 30% 20% auto 20% !important;
+					opacity: 0.8;
+					background-color: transparent !important;
+					color: #000;
+					/*font-size:100%;*/
+				}
+			}
+
+			body {
+				display: flex;
+				min-height: 100vh;
+				flex-direction: column;
+				background-image: url("Background_DotLine_01.png");
+				background-repeat: repeat;
+				background-attachment: fixed;
+			}
+
+			main {
+				flex: 1 0 auto;
+			}
     </style>
   </head>
   <body class="grey.lighten-5">
@@ -89,80 +106,80 @@
       </script>
     </header>
     <main>
-      <div class="container">
-        <div class="row">
-          <div class="col s12">
-            <div class="card grey.lighten-5">
-              <div class="card-content black-text">
-                <button class="btn-floating waves-effect waves-light red accent-4 right"><i class="large material-icons">mode_edit</i></button>
-                <span class="card-title red-text  text-accent-4"><b>User_Pessoas</b></span></br>
-
-                <div class="card-action row">
-                  <form class="col s12">
-                    <div class="row">
-                      <div class="input-field col s6">
-                        <input id="first_name" type="text" class="validate">
-                        <label for="first_name">Nome</label>
-                      </div>
-                      <div class="input-field col s6">
-                        <input id="last_name" type="text" class="validate">
-                        <label for="last_name">Sobrenome</label>
-                      </div>
-                        <div class="input-field col s12">
-                          <input id="email" type="email" class="validate">
-                          <label for="email">Email</label>
-                        </div>
-                        <div class="input-field col s12">
-                          <input id="telefone" type="tel" class="validate">
-                          <label for="telefone">Telefone</label>
-                          <script type="text/javascript">
-                            $("#telefone, #celular").mask("(00) 00000-0000");
-                          </script>
-                        </div>
-                        <div class="input-field col s6">
-                          <input disabled value="Curso" id="curso" type="text" class="validate">
-                          <label for="curso">Curso</label>
-                        </div>
-                        <div class="input-field col s6">
-                          <input disabled value="Turma" id="turma" type="text" class="validate">
-                          <label for="turma">Turma</label>
-                        </div>
-                        <span class="red-text  text-accent-4 col s12">Deseja Participar do Carona Amiga?
-                          <!--p class="col s12">
-                            <input name="group1" type="radio" id="caronasim" />
-                            <label for="caronasim">Sim</label>
-                          </p>
-                          <p class="col s12">
-                            <input name="group1" type="radio" id="caronanao" />
-                            <label for="caronanao">Não</label>
-                          </p-->
-                          <div class="switch">
-                            <label>
-                              Não
-                              <input type="checkbox">
-                              <span class="lever"></span>
-                              Sim
-                            </label>
-                          </div>
-                        </span>
-                      </div>
-                    </form>
-                  </div>
-                  <div class="card-action">
-                    <button class="btn waves-effect waves-purple col s12 btn-flat disabled" type="submit" name="action"  href="#">Salvar</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-    <footer class="page-footer red accent-4">
-      <div class="container">
-        <center style="text-shadow: 2px 2px 5px #c0c0c0">© 2020 FATEC FRANCO DA ROCHA</center>
-      </div>
-    </footer>
+			<div class="container">
+				<form>
+					<div class="row">
+						<div class="col s12">
+							<div class="card grey.lighten-5">
+								<div class="card-content black-text">
+									<button class="btn-floating waves-effect waves-light red accent-4 right disabled">
+										<i class="large material-icons">mode_edit</i>
+									</button>
+									<span class="card-title red-text text-accent-4">
+										<b>User_Pessoas</b>
+									</span>
+									<br />
+									<div class="card-action row">
+										<div class="row">
+											<div class="input-field col s12">
+												<input id="inputNomeCompleto" type="text" class="validate" name="inputNomeCompleto" />
+												<label class="red-text text-accent-4" for="full_name">Nome Completo</label>
+											</div>
+											<div class="input-field col s12">
+												<input id="inputEmail" type="email" class="validate" name="inputEmail"/>
+												<label class="red-text text-accent-4" for="email">E-mail</label>
+											</div>
+											<div class="input-field col s12">
+												<input id="inputSenha" type="password" class="validate"name="inputSenha"/>
+												<label class="red-text text-accent-4" for="password">Senha</label>
+											</div>
+											<div class="input-field col s6">
+												<input disabled value="Curso" id="curso" type="text" class="validate"/>
+												<label class="red-text text-accent-4" for="curso">Curso</label>
+											</div>
+											<div class="input-field col s6">
+												<input disabled value="Turma" id="turma" type="text" class="validate"/>
+												<label  class="red-text text-accent-4" for="turma">Turma</label>
+											</div>
+											<span class="red-text text-accent-4 col s12">
+												Deseja Participar do Carona Amiga?
+												<!--p class="col s12">
+													<input name="group1" type="radio" id="caronasim" />
+													<label class="red-text text-accent-4" for="caronasim">Sim</label>
+												</p>
+												<p class="col s12">
+													<input name="group1" type="radio" id="caronanao" />
+													<label class="red-text text-accent-4" for="caronanao">Não</label>
+												</p-->
+												<div class="switch">
+													<label> 
+																	Não 
+														<input id="inputCaronaAmiga" type="checkbox" name="inputCaronaAmiga"/>
+														<span class="lever"/>
+																	Sim
+													</label>
+												</div>
+											</span>
+										</div>
+									</div>
+									<div class="card-action">
+										<p class="btn waves-effect waves-purple red accent-4 white-text col s12 btn-flat" type="submit" name="action">Salvar</p>
+										<br />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</main>
+		<footer class="page-footer red accent-4 r">
+			<div class="container">
+				<div class="row" style="text-shadow: 2px 2px 5px #c0c0c0; text-align: center;">
+				© 2020 FATEC FRANCO DA ROCHA
+				</div>
+			</div>
+		</footer>
   </body>
 </html>
 <!-- a href="#" data-target="slide-out" class="sidenav-trigger btn">Side nav demo</a -->
