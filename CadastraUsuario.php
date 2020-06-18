@@ -25,13 +25,13 @@
     $resultado = mysqli_query($conn, $sqlquery);
 
     if (mysqli_insert_id($conn)){
-      $_SESSION['msg'] = "Salvo Com Sucesso!";
-      header("Location: Cadastro.php");
+      $_SESSION['msg'] = "<b>|</b> Salvo Com Sucesso!";
+      header("Location: CadastrarNovoUsario.php");
     	// echo "Cadastrado com Sucesso!";
     }
     else{
-      $_SESSION['msg'] = "Não Foi Salvo Com Sucesso :("; 
-      header("Location: Cadastro.php");
+      $_SESSION['msg'] = "<b>|</b> Não Foi Salvo Com Sucesso :(";
+      header("Location: CadastrarNovoUsario.php");
       // echo "Não cadastro!";
     }
 

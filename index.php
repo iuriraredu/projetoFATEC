@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
   <head>
@@ -84,23 +87,30 @@
     <main id="central">
       <div class="container"  style="background-color: #fff">
         	<h5 style="text-align: center;" class="red-text text-accent-4">Bem-Vindo!</h5>
-        <form>
+        <form method="POST" action="LoginUsuario.php">
           <div class="row">
             <div class="input-field col s12">
               <input id="inputEmail" type="email" class="validate" name="inputEmail">
-              <label class="red-text text-accent-4" for="email">Usuário</label>
+              <label class="red-text text-accent-4" for="email">E-Mail</label>
             </div>
             <div class="input-field col s12">
               <input id="inputSenha" type="password" class="validate" name="inputSenha">
               <label class="red-text text-accent-4" for="password">Senha</label>
             </div>
+
+            <?php
+              if(isset($_SESSION['msgSenha'])){
+                echo $_SESSION['msgSenha'];
+                unset($_SESSION['msgSenha']);
+              }
+            ?>
             <div class="input-field col s12">
-	            <a class="btn waves-effect waves-purple red accent-4 white-text col s12 btn-flat" type="submit" name="action" href="Home.php">
+	            <button class="btn waves-effect waves-purple red accent-4 white-text col s12 btn-flat" type="submit" name="action">
 		            Acessar
 		            <!--  -->
 		            <i class="material-icons right">power_settings_new</i>
 		            <!--  -->
-	            </a>
+	            </button>
             </div>
           </div>
         </form>

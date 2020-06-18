@@ -1,3 +1,10 @@
+<?php
+	session_start();
+
+	if (empty($_SESSION['idUsuario'])){
+		header("Location: index.php"); // retorna pagina de login
+	}
+?>
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
 	<head>
@@ -87,40 +94,24 @@
 					<!-- Menu Mobile -->
 					<!-- a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a -->
 					<a href="#" data-activates="menu-mobile"class="sidenav-trigger button-collapse">
-						<i class="material-icons">menu</i>
-					</a>
+						<i class="material-icons">menu</i></a>
 					<ul id="nav-mobile" class="right hide-on-med-and-down">
-						<li>
-							<a href="Home.php">Avisos</a>
-						</li>
-						<li>
-							<a href="Cadastro.php">Cadastro</a>
-						</li>
-						<li class="active">
-							<a href="#">Mensagens</a>
-						</li>
-						<li>
-							<a href="#">Carona Amiga</a>
-						</li>
-						<li>
-							<a href="index.php">
-								<i class="material-icons right">power_settings_new</i>Sair
-							</a>
-						</li>
+						<li><a href="Home.php">Avisos</a></li>
+						<li><a href="Cadastro.php">Cadastro</a></li>
+						<li class="active"><a href="#">Mensagens</a></li>
+						<!--li><a href="#">Carona Amiga</a></li-->
+						<li><a href="CadastrarNovoUsario.php">Cadastrar Novo Usuário</a></li>
+						<li><a href="index.php"><i class="material-icons right">power_settings_new</i>Sair</a></li>
 					</ul>
 					<ul class="side-nav" id="menu-mobile">
-						<li><a href="Home.php"><i class="material-icons">announcement</i>Avisos</a>
-						</li>
-						<li><a href="Cadastro.php"><i class="material-icons">person</i>Cadastro</a>
-						</li>
+						<li><a href="Home.php"><i class="material-icons">announcement</i>Avisos</a></li>
+						<li><a href="Cadastro.php"><i class="material-icons">person</i>Cadastro</a></li>
 						<li class="active"><a href="#"><i class="material-icons">message</i>Mensagens</a>
 						</li>
-						<li><a href="#"><i class="material-icons">directions_car</i>Carona Amiga</a>
-						</li>
-						<li><div class="divider"></div>
-						</li>
-						<li><a href="index.php"><i class="material-icons center">power_settings_new</i>Sair</a>
-						</li>
+						<!-- li><a href="#"><i class="material-icons">directions_car</i>Carona Amiga</a></li-->
+						<li><a href="CadastrarNovoUsario.php"><i class="material-icons">person_add</i>Cadastrar Novo Usuário</a></li>
+						<li><div class="divider"></div></li>
+						<li><a href="index.php"><i class="material-icons center">power_settings_new</i>Sair</a></li>
 					</ul>
 				</div>
 			</nav>

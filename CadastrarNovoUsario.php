@@ -5,8 +5,6 @@
 		header("Location: index.php"); // retorna pagina de login
 	}
 ?>
-
-
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
 	<head>
@@ -93,20 +91,18 @@
 
 					<ul id="nav-mobile" class="right hide-on-med-and-down">
 						<li><a href="Home.php">Avisos</a></li>
-						<li class="active"><a href="#">Cadastro</a></li>
+						<li><a href="Cadastro.php">Cadastro</a></li>
 						<li><a href="Mensagem.php">Mensagens</a></li>
-						<!--li><a href="#">Carona Amiga</a></li-->
-						<li><a href="CadastrarNovoUsario.php">Cadastrar Novo Usuário</a></li>
-						<li><a href="LogoutUsuario.php"><i class="material-icons right">power_settings_new</i>Sair</a></li>
+						<li class="active"><a href="#">Cadastrar Novo Usuário</a></li>
+						<li><a href="index.php"><i class="material-icons right">power_settings_new</i>Sair</a></li>
 					</ul>
 					<ul class="side-nav" id="menu-mobile">
 						<li><a href="Home.php"><i class="material-icons">announcement</i>Avisos</a></li>
-						<li class="active"><a href="#"><i class="material-icons">person</i>Cadastro</a></li>
+						<li><a href="Cadastro.php"><i class="material-icons">person</i>Cadastro</a></li>
 						<li><a href="Mensagem.php"><i class="material-icons">message</i>Mensagens</a></li>
-						<!-- li><a href="#"><i class="material-icons">directions_car</i>Carona Amiga</a></li-->
-						<li><a href="CadastrarNovoUsario.php"><i class="material-icons">person_add</i>Cadastrar Novo Usuário</a></li>
+						<li class="active"><a href="#"><i class="material-icons">person_add</i>Cadastrar Novo Usuário</a></li>
 						<li><div class="divider"></div></li>
-						<li><a href="LogoutUsuario.php"><i class="material-icons center">power_settings_new</i>Sair</a></li>
+						<li><a href="index.php"><i class="material-icons center">power_settings_new</i>Sair</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -118,30 +114,20 @@
 		</header>
 		<main>
 			<div class="container">
-				<form method="POST" action="AtualizarCadastro.php">
+				<form method="POST" action="CadastraUsuario.php">
 					<div class="row">
 						<div class="col s12">
 							<div class="card grey.lighten-5">
 								<div class="card-content black-text">
-									<span class="btn-floating waves-effect waves-light red accent-4 right"	onclick="habilitaEdicao()">
+									<button class="btn-floating waves-effect waves-light red accent-4 right disabled">
 										<i class="large material-icons">mode_edit</i>
-									</span>
-									<script>
-									 function habilitaEdicao(){
-										 document.getElementById("inputNomeCompleto").disabled = (document.getElementById("inputNomeCompleto").disabled) ? false: true;
-										 document.getElementById("inputEmail").disabled = (document.getElementById("inputEmail").disabled) ? false: true;
-										 document.getElementById("inputSenha").disabled = (document.getElementById("inputSenha").disabled) ? false: true;
-										 document.getElementById("inputCaronaAmiga").disabled = (document.getElementById("inputCaronaAmiga").disabled) ? false: true;
-										 document.getElementById("inputTipoUsuario").disabled = (document.getElementById("inputTipoUsuario").disabled) ? false: true;
-										 document.getElementById("btnSalvar").disabled = (document.getElementById("btnSalvar").disabled) ? false: true;
-									 }
-									</script>
+									</button>
 									<span class="card-title red-text text-accent-4">
-										<b><?php echo $_SESSION['nomeUsuario'];?></b>
+										<b>Cadastrar Novo Usuário</b>
 										<?php
-											if(isset($_SESSION['msgAtlCad'])){
-												echo $_SESSION['msgAtlCad'];
-												unset($_SESSION['msgAtlCad']);
+											if(isset($_SESSION['msg'])){
+												echo $_SESSION['msg'];
+												unset($_SESSION['msg']);
 											}
 										?>
 									</span>
@@ -149,15 +135,15 @@
 									<div class="card-action row">
 										<div class="row">
 											<div class="input-field col s12">
-												<input disabled id="inputNomeCompleto" type="text" class="validate" name="inputNomeCompleto" value="<?=$_SESSION['nomeUsuario']?>"/>
+												<input id="inputNomeCompleto" type="text" class="validate" name="inputNomeCompleto" />
 												<label class="red-text text-accent-4" for="full_name">Nome Completo</label>
 											</div>
 											<div class="input-field col s12">
-												<input disabled id="inputEmail" type="email" class="validate" name="inputEmail" value="<?=$_SESSION['eMail'] ?>"/>
+												<input id="inputEmail" type="email" class="validate" name="inputEmail"/>
 												<label class="red-text text-accent-4" for="email">E-mail</label>
 											</div>
 											<div class="input-field col s12">
-												<input disabled id="inputSenha" type="password" class="validate" name="inputSenha"/>
+												<input id="inputSenha" type="password" class="validate" name="inputSenha"/>
 												<label class="red-text text-accent-4" for="password">Senha</label>
 											</div>
 											<div class="input-field col s6">
@@ -181,7 +167,7 @@
 												<div class="switch">
 													<label>
 														Não
-														<input disabled id="inputCaronaAmiga" type="checkbox" name="inputCaronaAmiga" <?php echo $_SESSION['caronaAmiga'] == 1 ? 'checked': 'unchecked';?> />
+														<input id="inputCaronaAmiga" type="checkbox" name="inputCaronaAmiga" />
 														<span class="lever"></span>
 														Sim
 													</label>
@@ -189,19 +175,19 @@
 											</span>
 											<div class="col s6">
 												<label class="red-text text-accent-4">Tipo de Usuário</label>
-												<select disabled class="browser-default" name="inputTipoUsuario" id="inputTipoUsuario">
+												<select class="browser-default" name="inputTipoUsuario">
 													<option value="" disabled selected>Selecione o Tipo</option>
-													<option value="1" <?php echo $_SESSION['Usuario_TIPO']  == 1 ? 'selected'	: '';?>>Aluno</option>
-													<option value="2" <?php echo $_SESSION['Usuario_TIPO']  == 2 ? 'selected'	: '';?>>Coordenador</option>
-													<option value="3" <?php echo $_SESSION['Usuario_TIPO']  == 3 ? 'selected'	: '';?>>Diretoria</option>
-													<option value="4" <?php echo $_SESSION['Usuario_TIPO']  == 4 ? 'selected'	: '';?>>Professor</option>
-													<option value="5" <?php echo $_SESSION['Usuario_TIPO']  == 5 ? 'selected'	: '';?>>Secretaria</option>
+													<option value="1">Aluno</option>
+													<option value="2">Coordenador</option>
+													<option value="3">Diretoria</option>
+													<option value="4">Professor</option>
+													<option value="5">Secretaria</option>
 												</select>
 											</div>
 										</div>
 									</div>
 									<div class="card-action">
-										<button disabled class="btn waves-effect waves-purple red accent-4 white-text col s12 btn-flat" type="submit" name="btnSalvar" id="btnSalvar">Salvar</button>
+										<button class="btn waves-effect waves-purple red accent-4 white-text col s12 btn-flat" type="submit" name="action">Salvar</button>
 										<br />
 									</div>
 								</div>
