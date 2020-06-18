@@ -16,23 +16,23 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <style media="screen">	
+    <style media="screen">
     	/*** !important was needed for snippet ***/
 
 		/* label focus color */
 		.input-field input:focus + label, .materialize-textarea:focus:not([readonly]) + label{
 			color: D50000 !important;
 		}
-		
+
 		/* label underline focus color */
 		.row .input-field input:focus, .materialize-textarea:focus:not([readonly]) {
 			border-bottom: 1px solid #D50000 !important;
 			box-shadow: 0 1px 0 0 #D50000 !important;
 		}
-	
-		
+
+
 		/* ------------------- */
-			
+
 		h5{
 			text-transform: uppercase;
 			text-shadow: 2px 2px 5px #c0c0c0;
@@ -95,7 +95,7 @@
               <label class="red-text text-accent-4" for="password">Senha</label>
             </div>
             <div class="input-field col s12">
-	            <a class="btn waves-effect waves-purple red accent-4 white-text col s12 btn-flat" type="submit" name="action" href="Home.html">
+	            <a class="btn waves-effect waves-purple red accent-4 white-text col s12 btn-flat" type="submit" name="action" href="Home.php">
 		            Acessar
 		            <!--  -->
 		            <i class="material-icons right">power_settings_new</i>
@@ -109,7 +109,7 @@
     <footer class="page-footer red accent-4">
       <div class="container">
 	      <div class="row"style="text-shadow: 2px 2px 5px #c0c0c0; text-align: center;">
-			© 2020 FATEC FRANCO DA ROCHA 
+			© 2020 FATEC FRANCO DA ROCHA
 	      </div>
       </div>
     </footer>

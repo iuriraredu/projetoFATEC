@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt-br" dir="ltr">
 	<head>
@@ -83,19 +86,19 @@
 					<a href="#" data-activates="menu-mobile" class="sidenav-trigger button-collapse"><i class="material-icons">menu</i></a>
 
 					<ul id="nav-mobile" class="right hide-on-med-and-down">
-						<li><a href="Home.html">Avisos</a></li>
+						<li><a href="Home.php">Avisos</a></li>
 						<li class="active"><a href="#">Cadastro</a></li>
-						<li><a href="Mensagem.html">Mensagens</a></li>
+						<li><a href="Mensagem.php">Mensagens</a></li>
 						<li><a href="#">Carona Amiga</a></li>
-						<li><a href="index.html"><i class="material-icons right">power_settings_new</i>Sair</a></li>
+						<li><a href="index.php"><i class="material-icons right">power_settings_new</i>Sair</a></li>
 					</ul>
 					<ul class="side-nav" id="menu-mobile">
-						<li><a href="Home.html"><i class="material-icons">announcement</i>Avisos</a></li>
+						<li><a href="Home.php"><i class="material-icons">announcement</i>Avisos</a></li>
 						<li class="active"><a href="#"><i class="material-icons">person</i>Cadastro</a></li>
-						<li><a href="Mensagem.html"><i class="material-icons">message</i>Mensagens</a></li>
+						<li><a href="Mensagem.php"><i class="material-icons">message</i>Mensagens</a></li>
 						<li><a href="#"><i class="material-icons">directions_car</i>Carona Amiga</a></li>
 						<li><div class="divider"></div></li>
-						<li><a href="index.html"><i class="material-icons center">power_settings_new</i>Sair</a></li>
+						<li><a href="index.php"><i class="material-icons center">power_settings_new</i>Sair</a></li>
 					</ul>
 				</div>
 			</nav>
@@ -107,7 +110,7 @@
 		</header>
 		<main>
 			<div class="container">
-				<form>
+				<form method="POST" action="CadastraUsuario.php">
 					<div class="row">
 						<div class="col s12">
 							<div class="card grey.lighten-5">
@@ -117,6 +120,12 @@
 									</button>
 									<span class="card-title red-text text-accent-4">
 										<b>User_Pessoas</b>
+										<?php
+											if(isset($_SESSION['msg'])){
+												echo $_SESSION['msg'];
+												unset($_SESSION['msg']);
+											}
+										?>
 									</span>
 									<br />
 									<div class="card-action row">
@@ -130,7 +139,7 @@
 												<label class="red-text text-accent-4" for="email">E-mail</label>
 											</div>
 											<div class="input-field col s12">
-												<input id="inputSenha" type="password" class="validate"name="inputSenha"/>
+												<input id="inputSenha" type="password" class="validate" name="inputSenha"/>
 												<label class="red-text text-accent-4" for="password">Senha</label>
 											</div>
 											<div class="input-field col s6">
@@ -152,8 +161,8 @@
 													<label class="red-text text-accent-4" for="caronanao">Não</label>
 												</p-->
 												<div class="switch">
-													<label> 
-														Não 
+													<label>
+														Não
 														<input id="inputCaronaAmiga" type="checkbox" name="inputCaronaAmiga" />
 														<span class="lever"></span>
 														Sim
@@ -162,7 +171,7 @@
 											</span>
 											<div class="col s6">
 												<label class="red-text text-accent-4">Tipo de Usuário</label>
-												<select class="browser-default">
+												<select class="browser-default" name="inputTipoUsuario">
 													<option value="" disabled selected>Selecione o Tipo</option>
 													<option value="1">Aluno</option>
 													<option value="2">Coordenador</option>
@@ -174,7 +183,7 @@
 										</div>
 									</div>
 									<div class="card-action">
-										<input class="btn waves-effect waves-purple red accent-4 white-text col s12 btn-flat" type="submit" name="action" value="Salvar"></input>
+										<button class="btn waves-effect waves-purple red accent-4 white-text col s12 btn-flat" type="submit" name="action">Salvar</button>
 										<br />
 									</div>
 								</div>

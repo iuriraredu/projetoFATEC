@@ -89,18 +89,18 @@
 
 					<ul id="nav-mobile" class="right hide-on-med-and-down">
 						<li class="active"><a href="#">Avisos</a></li>
-						<li><a href="Cadastro.html">Cadastro</a></li>
-						<li><a href="Mensagem.html">Mensagens</a></li>
+						<li><a href="Cadastro.php">Cadastro</a></li>
+						<li><a href="Mensagem.php">Mensagens</a></li>
 						<li><a href="#">Carona Amiga</a></li>
-						<li><a href="index.html"><i class="material-icons right">power_settings_new</i>Sair</a></li>
+						<li><a href="index.php"><i class="material-icons right">power_settings_new</i>Sair</a></li>
 					</ul>
 					<ul class="side-nav" id="menu-mobile">
 						<li class="active"><a href="#"><i class="material-icons">announcement</i>Avisos</a></li>
-						<li><a href="Cadastro.html"><i class="material-icons">person</i>Cadastro</a></li>
-						<li><a href="Mensagem.html"><i class="material-icons">message</i>Mensagens</a></li>
+						<li><a href="Cadastro.php"><i class="material-icons">person</i>Cadastro</a></li>
+						<li><a href="Mensagem.php"><i class="material-icons">message</i>Mensagens</a></li>
 						<li><a href="#"><i class="material-icons">directions_car</i>Carona Amiga</a></li>
 						<li><div class="divider"></div></li>
-						<li><a href="index.html"><i class="material-icons center">power_settings_new</i>Sair</a></li>
+						<li><a href="index.php"><i class="material-icons center">power_settings_new</i>Sair</a></li>
 					</ul>
 				</div>
 			</nav>

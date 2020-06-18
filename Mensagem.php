@@ -91,10 +91,10 @@
 					</a>
 					<ul id="nav-mobile" class="right hide-on-med-and-down">
 						<li>
-							<a href="Home.html">Avisos</a>
+							<a href="Home.php">Avisos</a>
 						</li>
 						<li>
-							<a href="Cadastro.html">Cadastro</a>
+							<a href="Cadastro.php">Cadastro</a>
 						</li>
 						<li class="active">
 							<a href="#">Mensagens</a>
@@ -103,15 +103,15 @@
 							<a href="#">Carona Amiga</a>
 						</li>
 						<li>
-							<a href="index.html">
+							<a href="index.php">
 								<i class="material-icons right">power_settings_new</i>Sair
 							</a>
 						</li>
 					</ul>
 					<ul class="side-nav" id="menu-mobile">
-						<li><a href="Home.html"><i class="material-icons">announcement</i>Avisos</a>
+						<li><a href="Home.php"><i class="material-icons">announcement</i>Avisos</a>
 						</li>
-						<li><a href="Cadastro.html"><i class="material-icons">person</i>Cadastro</a>
+						<li><a href="Cadastro.php"><i class="material-icons">person</i>Cadastro</a>
 						</li>
 						<li class="active"><a href="#"><i class="material-icons">message</i>Mensagens</a>
 						</li>
@@ -119,7 +119,7 @@
 						</li>
 						<li><div class="divider"></div>
 						</li>
-						<li><a href="index.html"><i class="material-icons center">power_settings_new</i>Sair</a>
+						<li><a href="index.php"><i class="material-icons center">power_settings_new</i>Sair</a>
 						</li>
 					</ul>
 				</div>
