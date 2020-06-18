@@ -131,6 +131,7 @@
 										 document.getElementById("inputNomeCompleto").disabled = (document.getElementById("inputNomeCompleto").disabled) ? false: true;
 										 document.getElementById("inputEmail").disabled = (document.getElementById("inputEmail").disabled) ? false: true;
 										 document.getElementById("inputSenha").disabled = (document.getElementById("inputSenha").disabled) ? false: true;
+										 document.getElementById("inputConfirmaSenha").disabled = (document.getElementById("inputConfirmaSenha").disabled) ? false: true;
 										 document.getElementById("inputCaronaAmiga").disabled = (document.getElementById("inputCaronaAmiga").disabled) ? false: true;
 										 document.getElementById("inputTipoUsuario").disabled = (document.getElementById("inputTipoUsuario").disabled) ? false: true;
 										 document.getElementById("btnSalvar").disabled = (document.getElementById("btnSalvar").disabled) ? false: true;
@@ -156,9 +157,13 @@
 												<input disabled id="inputEmail" type="email" class="validate" name="inputEmail" value="<?=$_SESSION['eMail'] ?>"/>
 												<label class="red-text text-accent-4" for="email">E-mail</label>
 											</div>
-											<div class="input-field col s12">
-												<input disabled id="inputSenha" type="password" class="validate" name="inputSenha"/>
+											<div class="input-field col s6">
+												<input disabled id="inputSenha" type="password" class="validate" name="inputSenha" value=""/>
 												<label class="red-text text-accent-4" for="password">Senha</label>
+											</div>
+											<div class="input-field col s6">
+												<input disabled id="inputConfirmaSenha" type="password" class="validate" name="inputConfirmaSenha" value=""/>
+												<label class="red-text text-accent-4" for="password">Confirma Senha</label>
 											</div>
 											<div class="input-field col s6">
 												<input disabled value="Curso" id="curso" type="text" class="validate"/>
